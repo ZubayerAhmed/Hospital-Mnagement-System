@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="754.0" style="-fx-background-color: #778899;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.Tab.DoctorTabController">
+   <children>
+      <TableView fx:id="doctorTable" layoutY="69.0" prefHeight="341.0" prefWidth="754.0">
+         <columns>
+            <TableColumn fx:id="doctorIdColumn" editable="false" prefWidth="157.0" text="Doctor ID" />
+            <TableColumn fx:id="doctorNameColumn" editable="false" prefWidth="244.0" text="Doctor Name" />
+            <TableColumn fx:id="departmentColumn" editable="false" prefWidth="352.0" text="Department" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="1.0" layoutY="410.0" prefHeight="163.0" prefWidth="754.0">
+         <children>
+            <GridPane layoutX="14.0" layoutY="25.0" vgap="10.0">
+               <children>
+                  <TextField fx:id="tfAddDoctorID" layoutX="328.0" layoutY="317.0" GridPane.columnIndex="1" />
+                  <Label layoutX="229.0" layoutY="321.0" text="Doctor ID" />
+                  <Label layoutX="229.0" layoutY="411.0" text="Department" GridPane.rowIndex="2" />
+                  <Button fx:id="btAddDoctor" layoutX="328.0" layoutY="447.0" onAction="#handleBtAddDoctor" prefHeight="25.0" prefWidth="66.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label layoutX="229.0" layoutY="364.0" prefHeight="17.0" prefWidth="83.0" text="Doctor Name" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfAddDoctorName" layoutX="328.0" layoutY="360.0" prefHeight="25.0" prefWidth="259.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfAddDepartment" layoutX="328.0" layoutY="407.0" onAction="#handleBtAddDoctor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Button fx:id="btDelete" layoutX="411.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleBtDelete" prefHeight="25.0" prefWidth="83.0" text="Delete" />
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER_LEFT" layoutX="33.0" layoutY="25.0" prefHeight="40.0" prefWidth="470.0" spacing="15.0">
+         <children>
+            <Label layoutX="14.0" layoutY="37.0" prefHeight="17.0" prefWidth="96.0" text="Search keyword:" />
+            <TextField fx:id="tfDoctorSearch" layoutX="121.0" layoutY="33.0" prefHeight="25.0" prefWidth="190.0" />
+            <ComboBox fx:id="cbSearch" prefHeight="25.0" prefWidth="123.0" promptText="Search by..." />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
